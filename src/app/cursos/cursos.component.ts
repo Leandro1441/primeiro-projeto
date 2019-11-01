@@ -12,13 +12,10 @@ export class CursosComponent implements OnInit {
 
   nomePortal: string;
   cursos:string[];
-  
+
   constructor(private CursosService:CursosService) { 
-    this.nomePortal='Unip';
-    //var servico=new CursosService();
-    
+    this.nomePortal=this.CursosService.getNomeInstituiçao();
     this.cursos=this.CursosService.getCursos();
-    
   }
     
   ngOnInit() {
